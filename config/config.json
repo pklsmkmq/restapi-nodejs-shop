@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "sql6584577",
+    "password": "dwv6tnyvdK",
+    "database": "sql6584577",
+    "host": "sql6.freesqldatabase.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "sql6584577",
+    "password": "dwv6tnyvdK",
+    "database": "sql6584577",
+    "host": "sql6.freesqldatabase.com",
+    "dialect": "mysql"
+  }
+}
