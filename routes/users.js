@@ -33,15 +33,19 @@ router.post('/register', async (req, res) => {
   const hashPassword = await bcrypt.hash(password, salt);
 
   try {
-    const userCreate = Users.create({
+    const userCreate = await Users.create({
       name: name,
       email: email,
       password: hashPassword
     });
-    return res.json({
-      status: 201,
-      message: "Registrasi Berhasil"
-    });
+    if (userCreate) {
+      return res.json({
+        status: 201,
+        message: "Registrasi Berhasil"
+      });
+    } else {
+      return res.status(401).json({ status: 401, message: "Gagal Register" });
+    }
   } catch (error) {
     return res.status(401).json({ status: 401, message: error });
   }
